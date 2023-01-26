@@ -1,0 +1,159 @@
+@charset "UTF-8";
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+	background-color: DodgerBlue;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	font: Monospace;
+}
+
+.ticketslink {
+	padding-left: 20px;
+	color: white;
+	font-size: 15px;
+}
+
+.ticketslink:link {
+	text-decoration: none;
+}
+
+.ticketslink:visited {
+	color: white;
+}
+
+#div-heading {
+	padding-left: 160px;
+}
+
+#tickets {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#tickets th{
+	text-align: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: Black;
+	color: white;
+	border: 1px solid #ddd;
+}
+#tickets td {
+	text-align: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	color: Black;
+	border: 1px solid #ddd;
+}
+
+#tickets-id {
+	padding-right: 100px;
+}
+
+#tickets-title {
+	padding-right: 100px;
+}
+
+#tickets-content {
+	padding-right: 100px;
+}
+
+#tickets-date {
+	padding-right: 100px;
+}
+
+#tickets-actions {
+	padding-right: 150px;
+}
+
+.btnEdit {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btnDelete {
+  background-color: #e60000;
+  color: white;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btnView {
+  background-color: #00e6e6;
+  color: black;
+  padding: 8px 8px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+input[type=text] {
+  width: 100%;	
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]#keyword{
+	margin-right:auto;
+    margin-left:160px;
+    width:500px;
+}
+
+textarea {
+  width: 100%;	
+  padding: 12px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+button[type=submit], input[type=submit] {
+  background-color: DodgerBlue;
+  color: white;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+	font: Monospace;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 20px 20px;
+}
+
+.searchForm {
+	
+}
+
+#formh1 {
+	text-align: center;
+}

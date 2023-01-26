@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Ticket Tracker Application</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+	<h3>
+		Ticket Tracker Application <a th:href="@{/admin/tickets/}"
+			class="ticketslink"> Tickets</a> <a
+			th:href="@{/admin/tickets/newTicket}" class="ticketslink"> New
+			Ticket</a>
+	</h3>
+
+
+	<div>
+		<h1 id="div-heading">List of Tickets</h1>
+
+		<form th:action="@{/admin/tickets/search}">
+				<input type="text" name="keyword" id="keyword" size="50"
+				th:value="${keyword}" required /> &nbsp; <input type="submit"
+				value="Submit" /> &nbsp; 
+		</form>
+
+		<table id="tickets">
+			<thead>
+				<tr>
+					<th id="tickets-id">#</th>
+					<th id="tickets-title">Ticket Title</th>
+					<th id="tickets-content">Ticket Short Description</th>
+					<th id="tickets-date">Ticket Created On</th>
+					<th id="tickets-actions">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="ticket : ${Ticket}">
+					<td th:text="${ticket.id}"></td>
+					<td th:text="${ticket.title}"></td>
+					<td th:text="${ticket.shortDescription}"></td>
+					<td th:text="${ticket.date}"></td>
+					<td><a th:href="@{/admin/tickets/{id}/edit (id=${ticket.id})}"
+						class="btnEdit">Edit</a> <a
+						th:href="@{/admin/tickets/{id}/delete(id=${ticket.id})}"
+						class="btnDelete">Delete</a> <a
+						th:href="@{/admin/tickets/{id}/view (id=${ticket.id})}"
+						class="btnView">View</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>

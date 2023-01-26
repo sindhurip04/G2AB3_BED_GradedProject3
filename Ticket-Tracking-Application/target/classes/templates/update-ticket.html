@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ticket Tracker Application</title>
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+
+<body>
+
+	<h3>
+			Ticket Tracker Application <a th:href="@{/admin/tickets/}"
+			class="ticketslink"> Tickets</a> <a
+			th:href="@{/admin/tickets/newTicket}" class="ticketslink"> New
+			Ticket</a>
+	</h3>
+	
+    <div class="container">
+        <h1 id="formh1">Edit Ticket</h1>
+        <hr>
+        <br>
+        <br>
+        <br>
+
+        <form action="#" th:action="@{/admin/tickets/save}" th:object="${TicketDetails}" method="POST">
+        	<input type="hidden" th:field="*{id}" />
+        	Title
+        	<br>
+            <input type="text" th:field="*{title}" class="form-control mb-4 col-4">
+			<br>
+			<label for="ShortDescription">Short Description</label>
+			<br>
+			<textarea id="ticketDescription" name="ShortDescription" rows="4" cols="65" ></textarea>
+			<br>
+			<label for="Content">Content</label>
+			<br>
+			<textarea id="ticketDescription" name="Content" rows="4" cols="65" ></textarea>
+			<br>
+			<br>
+            <button type="submit" class="btn btn-info col-2"> Submit </button>
+        </form>
+
+        <hr>
+
+    </div>
+</body>
+
+</html>

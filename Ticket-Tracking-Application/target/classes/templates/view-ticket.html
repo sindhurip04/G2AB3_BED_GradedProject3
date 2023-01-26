@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Ticket Tracker Application</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+
+	<h3>
+		Ticket Tracker Application <a th:href="@{/admin/tickets/}"
+			class="ticketslink"> Tickets</a> <a
+			th:href="@{/admin/tickets/newTicket}" class="ticketslink"> New
+			Ticket</a>
+	</h3>
+
+	
+        <h2><p th:text="${SingleTicket.title}"></p></h2>
+        Created on: <td th:text="${SingleTicket.date}"></td>
+        <br>
+        <br>
+        Short Description: <td th:text="${SingleTicket.shortDescription}"></td>
+        <br>
+        <br>
+        Description:
+        <td th:text="${SingleTicket.content}"></td>
+    
+    
+		
+	
+</body>
+
+</html>
